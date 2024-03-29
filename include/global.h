@@ -169,6 +169,10 @@ struct UCoords32
 
 struct SaveBlock3
 {
+#if DEXNAV == TRUE
+    u8 dexNavSearchLevels[NUM_SPECIES];
+    u8 dexNavChain;
+#endif
 };
 
 extern struct SaveBlock3 *gSaveBlock3Ptr;
